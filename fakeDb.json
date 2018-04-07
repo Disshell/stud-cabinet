@@ -1,0 +1,8 @@
+{
+  "users": [
+    { "id": 1, "login": "admin", "password": "123" }
+  ],
+  "applications": [
+    { "id": 1, "body": "some comment", "postId": 1 }
+  ]
+}

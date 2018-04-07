@@ -1,0 +1,177 @@
+<form [formGroup]="applicationForm" (ngSubmit)="onSubmit()" >
+  <mat-card class="d-flex flex-column m-1">
+    <mat-card-header>
+      <mat-card-title>Персональная информация</mat-card-title>
+    </mat-card-header>
+    <mat-form-field>
+      <input matInput formControlName="lastName" placeholder="Фамилия">
+      <mat-error>Поле не должно быть пустым</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput  formControlName="firstName" placeholder="Имя">
+      <mat-error>Поле не должно быть пустым</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput  formControlName="secondName" placeholder="Отчество">
+      <mat-error>Поле не должно быть пустым</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-select placeholder="Пол" formControlName="gender">
+        <mat-option value="male">Мужской</mat-option>
+        <mat-option value="female">Женский</mat-option>
+      </mat-select>
+      <mat-error>Поле не должно быть пустым</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput formControlName="dateOfBirth" [matDatepicker]="picker" placeholder="Дата Рождения">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+      <mat-error>Поле не должно быть пустым</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput  formControlName="birthplace" placeholder="Место рождения">
+      <mat-error>Поле не должно быть пустым</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput  formControlName="citizenship" placeholder="Гражданство">
+      <mat-error>Поле не должно быть пустым</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput  formControlName="phone" placeholder="Телефон">
+      <mat-error>Поле не должно быть пустым</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput  formControlName="homePhone" placeholder="Телефон">
+      <mat-error>Поле не должно быть пустым</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput  formControlName="email" placeholder="Email">
+      <mat-error>Некорректный Email</mat-error>
+    </mat-form-field>
+    <mat-accordion class="mb-2">
+      <mat-expansion-panel formGroupName="passport">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Паспортные данные
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div class="d-flex flex-column">
+          <mat-form-field >
+            <input matInput formControlName="passportSeries" placeholder="Серия">
+            <mat-error>Поле не должно быть пустым</mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput formControlName="passportNumber" placeholder="Номер">
+            <mat-error>Поле не должно быть пустым</mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput formControlName="passportDepartment" placeholder="Кем выдан">
+            <mat-error>Поле не должно быть пустым</mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput formControlName="passportDate" [matDatepicker]="picker1" placeholder="Дата выдачи">
+            <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+            <mat-datepicker #picker1></mat-datepicker>
+            <mat-error>Поле не должно быть пустым</mat-error>
+          </mat-form-field>
+        </div>
+      </mat-expansion-panel>
+      <mat-expansion-panel formGroupName="regAddress">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Адрес по прописке
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div class="flex-row">
+          <mat-form-field>
+            <input matInput formControlName="regAddressZipCode"  placeholder="Индекс">
+            <mat-error>Поле не должно быть пустым</mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput  formControlName="regAddressCountry" placeholder="Страна">
+            <mat-error>Поле не должно быть пустым</mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput  formControlName="regAddressRegion" placeholder="Регион">
+            <mat-error>Поле не должно быть пустым</mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput formControlName="regAddressDistrict" placeholder="Район">
+            <mat-error>Поле не должно быть пустым</mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput formControlName="regAddressCity" placeholder="Город">
+            <mat-error>Поле не должно быть пустым</mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput formControlName="regAddressStreet" placeholder="Улица">
+            <mat-error>Поле не должно быть пустым</mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput formControlName="regAddressHouse" placeholder="Дом">
+            <mat-error>Поле не должно быть пустым</mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput formControlName="regAddressHousing" placeholder="Корпус">
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput formControlName="regAddressApartment" placeholder="Квартира">
+            <mat-error>Поле не должно быть пустым</mat-error>
+          </mat-form-field>
+        </div>
+      </mat-expansion-panel>
+      <mat-expansion-panel formGroupName="factAddress">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Фактический адрес
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div class="flex-row">
+          <mat-form-field>
+            <input matInput formControlName="factAddressZipCode"  placeholder="Индекс">
+            <mat-error>Поле не должно быть пустым</mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput  formControlName="factAddressCountry" placeholder="Страна">
+            <mat-error>Поле не должно быть пустым</mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput  formControlName="factAddressRegion" placeholder="Регион">
+            <mat-error>Поле не должно быть пустым</mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput formControlName="factAddressDistrict" placeholder="Район">
+            <mat-error>Поле не должно быть пустым</mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput formControlName="factAddressCity" placeholder="Город">
+            <mat-error>Поле не должно быть пустым</mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput formControlName="factAddressStreet" placeholder="Улица">
+            <mat-error>Поле не должно быть пустым</mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput formControlName="factAddressHouse" placeholder="Дом">
+            <mat-error>Поле не должно быть пустым</mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput formControlName="factAddressHousing" placeholder="Корпус">
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput formControlName="factAddressApartment" placeholder="Квартира">
+            <mat-error>Поле не должно быть пустым</mat-error>
+          </mat-form-field>
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </mat-card>
+
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Экзамены и направления</mat-card-title>
+    </mat-card-header>
+  </mat-card>
+
+  <button mat-raised-button color="primary">Отправить</button>
+</form>

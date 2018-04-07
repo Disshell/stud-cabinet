@@ -1,0 +1,22 @@
+<form [formGroup]="registrationForm" (ngSubmit)="onSubmit()" class="d-flex flex-column">
+  <mat-form-field>
+    <input matInput  formControlName="firstName" placeholder="Имя">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput formControlName="lastName" placeholder="Фамилия">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput formControlName="email" placeholder="Email">
+    <mat-error>Неккоректный Email</mat-error>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput formControlName="password" placeholder="Пароль">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput formControlName="repeatedPassword" placeholder="Повторите пароль">
+  </mat-form-field>
+  <button mat-raised-button color="primary" >Отправить</button>
+</form>
+
+
+
