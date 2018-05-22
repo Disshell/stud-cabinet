@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl, FormGroup, Validators} from "@angular/forms";
+import {FormArray, FormControl, FormGroup, Validators} from "@angular/forms";
+import {DbService} from "../db.service";
+
+
+
 
 @Component({
   selector: 'app-application',
@@ -46,16 +50,58 @@ export class ApplicationComponent implements OnInit {
         'factAddressHousing': new FormControl(''),
         'factAddressApartment': new FormControl('', Validators.required)
       }),
+      'directions' : new FormArray([
+         new FormGroup({
+            "faculty": new FormControl('', Validators.required),
+            "direction": new FormControl('', Validators.required)
+        })
+      ]),
+      'exams' : new FormArray([]),
     }
   );
 
-  constructor() { }
+  currentExams: Array<string> = [];
+  constructor(private dbService: DbService) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {  }
 
   onSubmit(){
-    console.log(this.applicationForm)
+    const application = this.applicationForm.value;
+    console.log(application);
+    console.log(this.applicationForm);
+    this.dbService.createApplication(application)
+      .subscribe();
   }
+
+  addDirection(){
+    const fg = new FormGroup({
+      "faculty": new FormControl('', Validators.required),
+      "direction": new FormControl('', Validators.required)
+    });
+    fg.setParent(<FormArray>this.applicationForm.controls.directions);
+    this.applicationForm.controls.directions['controls'].push(fg);
+  }
+
+  removeDirection(index: number){
+    const control = <FormArray>this.applicationForm.controls.directions;
+    control.removeAt(index);
+  }
+
+  addExam(event){
+    console.log(event);
+    let exams =  event.source.value['exams'];
+    for(let i = 0;i<exams.length; i++)
+    if(this.currentExams.lastIndexOf(exams[i])==-1){
+      this.currentExams.push(exams[i]);
+      const fg = new FormGroup({
+          "exam": new FormControl(exams[i], Validators.required),
+          "point": new FormControl(0, Validators.required)
+        });
+        fg.setParent(<FormArray>this.applicationForm.controls.exams);
+        this.applicationForm.controls.exams['controls'].push(fg);
+    }
+  }
+
+
 
 }
