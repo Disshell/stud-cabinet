@@ -57,14 +57,16 @@ export class ApplicationComponent implements OnInit {
         })
       ]),
       'exams' : new FormArray([]),
+      'totalPoint': new FormControl('0')
     }
   );
 
   currentExams: Array<string> = [];
+  totalPoint: number;
   constructor(private dbService: DbService) { }
-
-  ngOnInit() {  }
-
+  ngOnInit() {
+    this.totalPoint = 0;
+  }
   onSubmit(){
     const application = this.applicationForm.value;
     console.log(application);
@@ -72,7 +74,6 @@ export class ApplicationComponent implements OnInit {
     this.dbService.createApplication(application)
       .subscribe();
   }
-
   addDirection(){
     const fg = new FormGroup({
       "faculty": new FormControl('', Validators.required),
@@ -81,12 +82,10 @@ export class ApplicationComponent implements OnInit {
     fg.setParent(<FormArray>this.applicationForm.controls.directions);
     this.applicationForm.controls.directions['controls'].push(fg);
   }
-
   removeDirection(index: number){
     const control = <FormArray>this.applicationForm.controls.directions;
     control.removeAt(index);
   }
-
   addExam(event){
     console.log(event);
     let exams =  event.source.value['exams'];
@@ -95,13 +94,26 @@ export class ApplicationComponent implements OnInit {
       this.currentExams.push(exams[i]);
       const fg = new FormGroup({
           "exam": new FormControl(exams[i], Validators.required),
-          "point": new FormControl(0, Validators.required)
+          "point": new FormControl(0, [Validators.required, this.examPointValidator])
         });
         fg.setParent(<FormArray>this.applicationForm.controls.exams);
         this.applicationForm.controls.exams['controls'].push(fg);
     }
   }
+  addPoint(){
+    this.totalPoint = 0;
+    const exams = this.applicationForm.controls['exams'].value;
+    for(let i= 0; i< exams.length; i++){
+      this.totalPoint = Number(this.totalPoint) + Number(exams[i].point);
+      this.applicationForm.controls['totalPoint'].setValue(this.totalPoint);
+    }
 
-
-
+  }
+  examPointValidator(control: FormControl): {[s:string]:boolean}{
+    if(control.value>0 && control.value<=100){
+      return null;
+    }
+    else
+      return{"exam":true};
+  }
 }

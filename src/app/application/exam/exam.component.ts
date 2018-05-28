@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {FormGroup} from "@angular/forms";
 
 @Component({
@@ -7,12 +7,16 @@ import {FormGroup} from "@angular/forms";
   styleUrls: ['./exam.component.css']
 })
 export class ExamComponent implements OnInit {
-
   @Input() examGroup: FormGroup;
   @Input() examName: string;
+  @Output() onPointChange = new EventEmitter<any>();
+
   constructor() { }
 
   ngOnInit() {
+    console.log(this.examName);
   }
-
+  pointChange(){
+    this.onPointChange.emit();
+  }
 }

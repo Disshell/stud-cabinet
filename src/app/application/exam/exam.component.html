@@ -1,5 +1,5 @@
-<div  [formGroup]="examGroup" class="d-flex flex-column">
-  <mat-form-field >
-    <input matInput [placeholder]="examName" formControlName="point">
+<div  [formGroup]="examGroup" class="d-flex flex-row">
+  <mat-form-field>
+    <input matInput [placeholder]="examName" formControlName="point" (change)="pointChange()">
   </mat-form-field>
 </div>

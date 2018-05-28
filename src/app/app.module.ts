@@ -1,17 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {RouterModule, Routes} from "@angular/router";
-import  {MatFormFieldModule} from "@angular/material";
+import {MatFormFieldModule, MatIconModule} from "@angular/material";
 import {MatInputModule} from "@angular/material";
 import {MatButtonModule} from "@angular/material";
 import {MatSelectModule} from "@angular/material";
 import {MatDatepickerModule} from "@angular/material";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import  {MatExpansionModule} from "@angular/material";
+import {MatExpansionModule} from "@angular/material";
 import {MatCardModule} from "@angular/material";
+import {DbService} from "./db.service";
 import {MAT_MOMENT_DATE_FORMATS, MomentDateAdapter} from '@angular/material-moment-adapter';
 import {DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE} from '@angular/material/core';
-
+import {HttpClientModule} from "@angular/common/http";
 
 
 import { AppComponent } from './app.component';
@@ -19,7 +20,10 @@ import { RegistrationComponent } from './registration/registration.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ApplicationComponent } from './application/application.component';
 import { WelcomeComponent } from './welcome/welcome.component';
-import { ReactiveFormsModule } from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { DirectionComponent } from './application/direction/direction.component';
+import { KeysPipe } from './application/direction/keys.pipe';
+import { ExamComponent } from './application/exam/exam.component';
 
 const appRoutes: Routes  =[
   {path:'', component: WelcomeComponent},
@@ -33,7 +37,10 @@ const appRoutes: Routes  =[
     RegistrationComponent,
     ProfileComponent,
     ApplicationComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    DirectionComponent,
+    KeysPipe,
+    ExamComponent,
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
@@ -46,12 +53,16 @@ const appRoutes: Routes  =[
     MatSelectModule,
     MatDatepickerModule,
     MatExpansionModule,
-    MatCardModule
+    MatCardModule,
+    FormsModule,
+    MatIconModule,
+    HttpClientModule
   ],
   providers: [
+    DbService,
     {provide: MAT_DATE_LOCALE, useValue: 'ru'},
     {provide: DateAdapter, useClass: MomentDateAdapter, deps: [MAT_DATE_LOCALE]},
-    {provide: MAT_DATE_FORMATS, useValue: MAT_MOMENT_DATE_FORMATS},
+    {provide: MAT_DATE_FORMATS, useValue: MAT_MOMENT_DATE_FORMATS}
   ],
   bootstrap: [AppComponent]
 })

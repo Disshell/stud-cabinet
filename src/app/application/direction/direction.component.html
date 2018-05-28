@@ -1,0 +1,20 @@
+<div [formGroup]="directionGroup" class="mb-1">
+  <mat-form-field>
+    <mat-select placeholder="Факультет" formControlName="faculty" class="faculty" [(ngModel)]="selectedFaculty">
+      <mat-option [value]="faculty" *ngFor="let faculty of directions | keys" >{{faculty}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field >
+    <mat-select placeholder="Кафедра" formControlName="direction" class="direction">
+      <mat-option [value]="direction"
+                  *ngFor="let direction of directions[selectedFaculty]"
+                  (onSelectionChange)="addExams($event)"
+      >{{direction.name}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-icon></mat-icon>
+  <button mat-raised-button color="warn" class="align-self-center remove-icon" (click)="removeDirection()">
+    <mat-icon>close</mat-icon>
+  </button>
+</div>
+

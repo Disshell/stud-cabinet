@@ -41,7 +41,7 @@
       <mat-error>Поле не должно быть пустым</mat-error>
     </mat-form-field>
     <mat-form-field>
-      <input matInput  formControlName="homePhone" placeholder="Телефон">
+      <input matInput  formControlName="homePhone" placeholder="Домашний телефон">
       <mat-error>Поле не должно быть пустым</mat-error>
     </mat-form-field>
     <mat-form-field>
@@ -166,12 +166,47 @@
       </mat-expansion-panel>
     </mat-accordion>
   </mat-card>
-
-  <mat-card>
+  <mat-card class="d-flex flex-column m-1">
     <mat-card-header>
-      <mat-card-title>Экзамены и направления</mat-card-title>
+      <mat-card-title>Информация для поступления</mat-card-title>
     </mat-card-header>
+    <div formArrayName="directions" class="d-flex flex-column">
+      <p>Выбирите направления</p>
+      <app-direction class="d-flex"
+                     *ngFor="let item of applicationForm.controls['directions'].controls;
+         let i = index"
+                     [formGroupName]="i"
+                     [index]="i"
+                     [directionGroup]="item"
+                     (onDeletedDirection)="removeDirection($event)"
+                     (onAddedExam)="addExam($event)"
+      >
+      </app-direction>
+      <button type="button" mat-raised-button color="primary" (click)="addDirection()">Добавить направление</button>
+    </div>
+    <div class="mt-4">
+      <div formArrayName="exams">
+        <p>Введите результат ЕГЭ</p>
+        <app-exam (onPointChange)="addPoint()" *ngFor="let item of applicationForm.controls['exams'].controls;
+                  let i = index"
+                  [formGroupName]="i"
+                  [examGroup]="item"
+                  [examName]="item.controls['exam'].value"
+        >
+        </app-exam>
+      </div>
+      <hr>
+      <mat-form-field class="d-flex ">
+        <input matInput formControlName="totalPoint" placeholder="Всего" readonly>
+      </mat-form-field>
+    </div>
   </mat-card>
-
-  <button mat-raised-button color="primary">Отправить</button>
+  <mat-card class="d-flex flex-column m-1">
+    <mat-card-header>
+      <mat-card-title>Военная обязанность</mat-card-title>
+    </mat-card-header>
+    <div class="d-flex flex-column">
+    </div>
+  </mat-card>
+  <button type="submit" mat-raised-button color="primary">Отправить</button>
 </form>

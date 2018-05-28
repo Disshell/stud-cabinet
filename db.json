@@ -1,0 +1,372 @@
+{
+  "applications": [
+    {
+      "firstName": "",
+      "lastName": "",
+      "secondName": "",
+      "gender": "",
+      "dateOfBirth": "",
+      "birthplace": "",
+      "citizenship": "",
+      "phone": "",
+      "homePhone": "",
+      "email": "",
+      "passport": {
+        "passportSeries": "",
+        "passportNumber": "",
+        "passportDepartment": "",
+        "passportDate": ""
+      },
+      "regAddress": {
+        "regAddressZipCode": "",
+        "regAddressCountry": "",
+        "regAddressRegion": "",
+        "regAddressDistrict": "",
+        "regAddressCity": "",
+        "regAddressStreet": "",
+        "regAddressHouse": "",
+        "regAddressHousing": "",
+        "regAddressApartment": ""
+      },
+      "factAddress": {
+        "factAddressZipCode": "",
+        "factAddressCountry": "",
+        "factAddressRegion": "",
+        "factAddressDistrict": "",
+        "factAddressCity": "",
+        "factAddressStreet": "",
+        "factAddressHouse": "",
+        "factAddressHousing": "",
+        "factAddressApartment": ""
+      },
+      "directions": [
+        {
+          "faculty": "Архитектурно-строительный факультет",
+          "direction": "Технология строительного производства"
+        }
+      ],
+      "id": 2
+    },
+    {
+      "firstName": "Александр",
+      "lastName": "Берсенев",
+      "secondName": "Иванович",
+      "gender": "male",
+      "dateOfBirth": "1997-02-25T21:00:00.000Z",
+      "birthplace": "Ярославль",
+      "citizenship": "Россия",
+      "phone": "+79619738127",
+      "homePhone": "447994",
+      "email": "aleksandbers@gmail.com",
+      "passport": {
+        "passportSeries": "7810",
+        "passportNumber": "748485",
+        "passportDepartment": "ОУФМС России по Ярославской области в Фрунзенском районе гор. Ярославля",
+        "passportDate": "2017-03-02T21:00:00.000Z"
+      },
+      "regAddress": {
+        "regAddressZipCode": "150030",
+        "regAddressCountry": "Россия",
+        "regAddressRegion": "Ярославская область",
+        "regAddressDistrict": "Ярославский",
+        "regAddressCity": "Ярославль",
+        "regAddressStreet": "Московский пр-кт",
+        "regAddressHouse": "129",
+        "regAddressHousing": "",
+        "regAddressApartment": "112"
+      },
+      "factAddress": {
+        "factAddressZipCode": "150030",
+        "factAddressCountry": "Россия",
+        "factAddressRegion": "Ярославская область",
+        "factAddressDistrict": "Ярославский",
+        "factAddressCity": "Ярославль",
+        "factAddressStreet": "Московский пр-кт",
+        "factAddressHouse": "129",
+        "factAddressHousing": "",
+        "factAddressApartment": "112"
+      },
+      "directions": [
+        {
+          "faculty": "Химико-технологический факультет",
+          "direction": "Химическая технология органических веществ"
+        },
+        {
+          "faculty": "Химико-технологический факультет",
+          "direction": "Органическая и аналитическая химия"
+        },
+        {
+          "faculty": "Химико-технологический факультет",
+          "direction": "Охрана труда и природы"
+        },
+        {
+          "faculty": "Архитектурно-строительный факультет",
+          "direction": "Строительные конструкции"
+        }
+      ],
+      "id": 3
+    },
+    {
+      "firstName": "",
+      "lastName": "",
+      "secondName": "",
+      "gender": "",
+      "dateOfBirth": "",
+      "birthplace": "",
+      "citizenship": "",
+      "phone": "",
+      "homePhone": "",
+      "email": "",
+      "passport": {
+        "passportSeries": "",
+        "passportNumber": "",
+        "passportDepartment": "",
+        "passportDate": ""
+      },
+      "regAddress": {
+        "regAddressZipCode": "",
+        "regAddressCountry": "",
+        "regAddressRegion": "",
+        "regAddressDistrict": "",
+        "regAddressCity": "",
+        "regAddressStreet": "",
+        "regAddressHouse": "",
+        "regAddressHousing": "",
+        "regAddressApartment": ""
+      },
+      "factAddress": {
+        "factAddressZipCode": "",
+        "factAddressCountry": "",
+        "factAddressRegion": "",
+        "factAddressDistrict": "",
+        "factAddressCity": "",
+        "factAddressStreet": "",
+        "factAddressHouse": "",
+        "factAddressHousing": "",
+        "factAddressApartment": ""
+      },
+      "directions": [
+        {
+          "faculty": "Химико-технологический факультет",
+          "direction": ""
+        },
+        {
+          "direction": ""
+        },
+        {
+          "direction": ""
+        },
+        {
+          "direction": ""
+        }
+      ],
+      "id": 4
+    },
+    {
+      "firstName": "",
+      "lastName": "",
+      "secondName": "",
+      "gender": "",
+      "dateOfBirth": "",
+      "birthplace": "",
+      "citizenship": "",
+      "phone": "",
+      "homePhone": "",
+      "email": "",
+      "passport": {
+        "passportSeries": "",
+        "passportNumber": "",
+        "passportDepartment": "",
+        "passportDate": ""
+      },
+      "regAddress": {
+        "regAddressZipCode": "",
+        "regAddressCountry": "",
+        "regAddressRegion": "",
+        "regAddressDistrict": "",
+        "regAddressCity": "",
+        "regAddressStreet": "",
+        "regAddressHouse": "",
+        "regAddressHousing": "",
+        "regAddressApartment": ""
+      },
+      "factAddress": {
+        "factAddressZipCode": "",
+        "factAddressCountry": "",
+        "factAddressRegion": "",
+        "factAddressDistrict": "",
+        "factAddressCity": "",
+        "factAddressStreet": "",
+        "factAddressHouse": "",
+        "factAddressHousing": "",
+        "factAddressApartment": ""
+      },
+      "directions": [
+        {
+          "faculty": "Химико-технологический факультет",
+          "direction": ""
+        },
+        {
+          "direction": ""
+        },
+        {
+          "direction": ""
+        },
+        {
+          "direction": ""
+        }
+      ],
+      "id": 5
+    },
+    {
+      "firstName": "",
+      "lastName": "",
+      "secondName": "",
+      "gender": "",
+      "dateOfBirth": "",
+      "birthplace": "",
+      "citizenship": "",
+      "phone": "",
+      "homePhone": "",
+      "email": "",
+      "passport": {
+        "passportSeries": "",
+        "passportNumber": "",
+        "passportDepartment": "",
+        "passportDate": ""
+      },
+      "regAddress": {
+        "regAddressZipCode": "",
+        "regAddressCountry": "",
+        "regAddressRegion": "",
+        "regAddressDistrict": "",
+        "regAddressCity": "",
+        "regAddressStreet": "",
+        "regAddressHouse": "",
+        "regAddressHousing": "",
+        "regAddressApartment": ""
+      },
+      "factAddress": {
+        "factAddressZipCode": "",
+        "factAddressCountry": "",
+        "factAddressRegion": "",
+        "factAddressDistrict": "",
+        "factAddressCity": "",
+        "factAddressStreet": "",
+        "factAddressHouse": "",
+        "factAddressHousing": "",
+        "factAddressApartment": ""
+      },
+      "directions": [
+        {
+          "faculty": "Химико-технологический факультет",
+          "direction": ""
+        },
+        {
+          "direction": ""
+        },
+        {
+          "direction": ""
+        },
+        {
+          "direction": ""
+        }
+      ],
+      "id": 6
+    },
+    {
+      "firstName": "Александр",
+      "lastName": "Берсенев",
+      "secondName": "Иванович",
+      "gender": "male",
+      "dateOfBirth": "2018-05-16T21:00:00.000Z",
+      "birthplace": "Ярославль",
+      "citizenship": "Русский",
+      "phone": "+79619738127",
+      "homePhone": "447994",
+      "email": "aleksandbers@gmail.com",
+      "passport": {
+        "passportSeries": "7810",
+        "passportNumber": "748485",
+        "passportDepartment": "кем-то",
+        "passportDate": "2018-05-22T21:00:00.000Z"
+      },
+      "regAddress": {
+        "regAddressZipCode": "150030",
+        "regAddressCountry": "Ярославль",
+        "regAddressRegion": "Ярославская область",
+        "regAddressDistrict": "fghj",
+        "regAddressCity": "ыва",
+        "regAddressStreet": "выа",
+        "regAddressHouse": "ыва",
+        "regAddressHousing": "вфыа",
+        "regAddressApartment": "фыва"
+      },
+      "factAddress": {
+        "factAddressZipCode": "фвыа",
+        "factAddressCountry": "вфыа",
+        "factAddressRegion": "фвыа",
+        "factAddressDistrict": "фыва",
+        "factAddressCity": "фвыа",
+        "factAddressStreet": "фыва",
+        "factAddressHouse": "вфыа",
+        "factAddressHousing": "выфа",
+        "factAddressApartment": "выфа"
+      },
+      "directions": [
+        {
+          "faculty": "Химико-технологический факультет",
+          "direction": {
+            "name": "Фундаментальная и прикладная химия",
+            "exams": [
+              "Химия",
+              "Биология",
+              "Русский язык"
+            ]
+          }
+        },
+        {
+          "faculty": "Химико-технологический факультет",
+          "direction": {
+            "name": "Химическая технология",
+            "exams": [
+              "Математика",
+              "Химия",
+              "Русский язык"
+            ]
+          }
+        },
+        {
+          "faculty": "Химико-технологический факультет",
+          "direction": {
+            "name": "Энерго и ресурсосберегающие процессы в химической технологии, нефтехимии и биотехнологии",
+            "exams": [
+              "Математика",
+              "Биология",
+              "Русский язык"
+            ]
+          }
+        }
+      ],
+      "exams": [
+        {
+          "exam": "Химия",
+          "point": "1488"
+        },
+        {
+          "exam": "Биология",
+          "point": "1488"
+        },
+        {
+          "exam": "Русский язык",
+          "point": "1488"
+        },
+        {
+          "exam": "Математика",
+          "point": "1488"
+        }
+      ],
+      "id": 7
+    }
+  ]
+}
